@@ -1,9 +1,6 @@
 # Ant Launcher 
 Launcher oficial de Ant Studios.
 
-![Static Badge](https://img.shields.io/badge/Working-3A9740?logo=ticktick&logoColor=49E453)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/raulgutveg/Bananus-Launcher)
-
 #### Funciona ⚡
 ![Static Badge](https://img.shields.io/badge/Windows-white?logo=windows&logoColor=0078D4) ![Static Badge](https://img.shields.io/badge/macOS-white?logo=apple&logoColor=000000) ![Static Badge](https://img.shields.io/badge/Linux-white?logo=linux&logoColor=FCC624) 
 
