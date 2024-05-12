@@ -1,6 +1,6 @@
 {
     "name": "Papu-Launcher",
-    "preductname": "Ant-Launcher",
+    "preductname": "Papu-Launcher",
     "version": "2.0.0",    
     "description": "???",
     "main": "src/app.js",
