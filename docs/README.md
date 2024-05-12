@@ -1,5 +1,5 @@
-# Ant Launcher 
-Launcher oficial de Ant Studios.
+# Papu Launcher
+Launcher oficial de Papu Studios.
 
 #### Funciona ⚡
 ![Static Badge](https://img.shields.io/badge/Windows-white?logo=windows&logoColor=0078D4) ![Static Badge](https://img.shields.io/badge/macOS-white?logo=apple&logoColor=000000) ![Static Badge](https://img.shields.io/badge/Linux-white?logo=linux&logoColor=FCC624) 
@@ -15,7 +15,7 @@ las personas puedan hacer forks de ellos para poder hacer sus propios launchers.
 
 | Plataforma  | Archivo  |
 | ------------ | ------------ |
-| Windows 10/11 x64  | Ant-Launcher-win-x64.exe |
-| macOS x64  | Ant-Launcher-mac-x64.dmg |
-| macOS arm64  | Ant-Launcher-mac-arm64.dmg  |
-| Linux x64 | Ant-Launcher-linux-x86_64.AppImage |
+| Windows 10/11 x64  | Papu-Launcher-win-x64.exe |
+| macOS x64  | Papu-Launcher-mac-x64.dmg |
+| macOS arm64  | Papu-Launcher-mac-arm64.dmg  |
+| Linux x64 | Papu-Launcher-linux-x86_64.AppImage |
