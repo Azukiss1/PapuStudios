@@ -87,16 +87,7 @@ class Home {
                     </div>
                     <div class="news-content">
                         <div class="bbWrapper">
-                            <p>Creditos:</br>Azukiss grax por hacer el launcher
-                            Gracias por ayudarnos con el mapa sos un grande 
-                            Miss pinky grax por hacer el doblaje
-                            Lauty grax por ayudarme en todo se te agradecerá
-                            Guardias gracias a vosotros también 
-                            Participantes gracias por participar espero y tengan mucha suerte y que el evento salga bien
-                            Angelex grax por ser mano derecha de aleos777
-                            Aleos777 gracias por realizar el evento mucha suerte en los squids craft games 3
-                            Y por último gracias a todos enserio mil gracias a todos por apoyar a nuestro Studio llamado ant STUDIO sin ustedes esto no se hubiera hecho realidad y gracias angelex por todo os deseo suerte en los squids craft games 3 
-                            att:aleos777</p>
+                            <p>Inicio</br>Estas listo para los squid games 2?</p>
                         </div>
                     </div>`
             newsElement.appendChild(blockNews);

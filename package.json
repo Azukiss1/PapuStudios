@@ -1,13 +1,13 @@
 {
-    "name": "Ant-Launch",
-    "preductname": "Ant-Launch",
+    "name": "Papu-Launcher",
+    "preductname": "Ant-Launcher",
     "version": "2.0.0",    
-    "description": "Launcher para eventos de Ant studios",
+    "description": "???",
     "main": "src/app.js",
     "author": {
         "url": "https://github.com/luuxis"
     },
-    "url": "https://antlauncher.000webhostapp.com/main/",
+    "url": "https://papustudios.000webhostapp.com/main/",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
