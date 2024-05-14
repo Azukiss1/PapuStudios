@@ -1,4 +1,4 @@
-# Wedsafi
+# Wedsafio
 launcher para un dedsafio.
 
 #### Funciona ⚡
