@@ -1,8 +1,8 @@
 {
-    "name": "Papu-Launcher",
-    "preductname": "Papu-Launcher",
-    "version": "2.0.0",    
-    "description": "???",
+    "name": "Wedsafio",
+    "preductname": "Wedsafio",
+    "version": "1.0.0",    
+    "description": "Launcher para wedsafio",
     "main": "src/app.js",
     "author": {
         "url": "https://github.com/luuxis"

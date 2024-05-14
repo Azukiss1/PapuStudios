@@ -29,9 +29,9 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "Ant Studios god", "author": "??" },
-            { "message": "Cresiendo poco a poco.", "author": "??" },
-            { "message": "Si se puede", "author": "??" }
+            { "message": "Q riki", "author": "iker34251" },
+            { "message": "By2002", "author": "Azukiss" },
+            { "message": "Me hago una chaqueta", "author": "wedgito" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;

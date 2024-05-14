@@ -31,7 +31,7 @@ class Home {
                 blockNews.classList.add('news-block');
                 blockNews.innerHTML = `
                     <div class="news-header">
-                        <img class="server-status-icon" src="assets/images/icon.png">
+                        <img class="server-status-icon" src="assets/images/dedsafioruleta.png">
                         <div class="header-text">
                             <div class="title">Actualmente no hay noticias disponibles.</div>
                         </div>
@@ -53,7 +53,7 @@ class Home {
                     blockNews.classList.add('news-block');
                     blockNews.innerHTML = `
                         <div class="news-header">
-                            <img class="server-status-icon" src="assets/images/icon.png">
+                            <img class="server-status-icon" src="assets/images/dedsafioruleta.png">
                             <div class="header-text">
                                 <div class="title">${News.title}</div>
                             </div>
