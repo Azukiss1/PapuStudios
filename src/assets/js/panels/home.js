@@ -1,5 +1,5 @@
 /**
- * @author ruinita
+ * @author Azukiss
  */
 import { config, database, logger, changePanel, appdata, setStatus, pkg } from '../utils.js'
 
@@ -31,7 +31,7 @@ class Home {
                 blockNews.classList.add('news-block');
                 blockNews.innerHTML = `
                     <div class="news-header">
-                        <img class="server-status-icon" src="assets/images/dedsafioruleta.png">
+                        <img class="server-status-icon" src="assets/images/icon.png">
                         <div class="header-text">
                             <div class="title">Actualmente no hay noticias disponibles.</div>
                         </div>
@@ -53,7 +53,7 @@ class Home {
                     blockNews.classList.add('news-block');
                     blockNews.innerHTML = `
                         <div class="news-header">
-                            <img class="server-status-icon" src="assets/images/dedsafioruleta.png">
+                            <img class="server-status-icon" src="assets/images/icon.png">
                             <div class="header-text">
                                 <div class="title">${News.title}</div>
                             </div>
@@ -78,16 +78,16 @@ class Home {
                 <div class="news-header">
                         <img class="server-status-icon" src="assets/images/icon.png">
                         <div class="header-text">
-                            <div class="title">Noticia.</div>
+                            <div class="title">Error.</div>
                         </div>
                         <div class="date">
-                            <div class="day">9</div>
-                            <div class="month">Mayo</div>
+                            <div class="day">1</div>
+                            <div class="month">Janvier</div>
                         </div>
                     </div>
                     <div class="news-content">
                         <div class="bbWrapper">
-                            <p>Inicio</br>Estas listo para los squid games 2?</p>
+                            <p>Impossible de contacter le serveur des news.</br>Merci de vérifier votre configuration.</p>
                         </div>
                     </div>`
             newsElement.appendChild(blockNews);

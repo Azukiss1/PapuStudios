@@ -1,17 +1,17 @@
 {
-    "name": "Wedsafio",
-    "preductname": "Wedsafio",
-    "version": "1.2.0",    
-    "description": "Launcher para wedsafio",
+    "name": "Eclipse Launcher",
+    "preductname": "Eclipse Launcher",
+    "version": "1.0.0",
+    "description": "Launcher para los eventos de Eclipse Studios",
     "main": "src/app.js",
     "author": {
-        "url": "https://github.com/luuxis"
+        "name": "Azukiss"
     },
-    "url": "https://papustudios.000webhostapp.com/main/",
+    "url": "https://eclipsestudiosofficial.000webhostapp.com/main/",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
-        "build": "node build.js --obf=false --build=platform",
+        "build": "node build.js --obf=true --build=platform",
         "icon": "node build.js --icon=https://raw.githubusercontent.com/luuxis/Selvania-Launcher/master/src/assets/images/icon.png"
     },
     "license": "CCANC",
@@ -20,19 +20,21 @@
         "ignore": "**/test"
     },
     "dependencies": {
-        "electron-updater": "^6.1.4",
-        "minecraft-java-core": "^3.8.1",
-        "node-bdd": "^2.0.3",
+        "discord-rpc": "^4.0.1",
+        "electron-updater": "^6.1.8",
+        "minecraft-java-core": "^3.10.4",
+        "node-bdd": "^2.0.4",
         "node-fetch": "^2.7.0",
+        "rpc": "^3.3.3",
         "xml-js": "^1.6.11"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
-        "electron": "^27.0.4",
-        "electron-builder": "^24.6.4",
+        "electron": "^30.0.9",
+        "electron-builder": "^24.13.3",
         "javascript-obfuscator": "^4.1.0",
-        "jimp": "^0.22.10",
-        "nodemon": "^3.0.1",
+        "jimp": "^0.22.12",
+        "nodemon": "^3.1.2",
         "png2icons": "^2.0.1"
     },
     "repository": {
