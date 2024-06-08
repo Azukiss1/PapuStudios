@@ -1,7 +1,7 @@
 {
-    "name": "Eclipse Launcher",
-    "preductname": "Eclipse Launcher",
-    "version": "2.0.1",
+    "name": "Eclipse-Launcher",
+    "preductname": "Eclipse-Launcher",
+    "version": "2.0.5",
     "description": "Launcher para los eventos de Eclipse Studios",
     "main": "src/app.js",
     "author": {
