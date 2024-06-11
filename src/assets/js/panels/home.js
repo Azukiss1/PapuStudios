@@ -1,5 +1,5 @@
 /**
- * @author Azukiss
+ * @author ElFo2Ks
  */
 import { config, database, logger, changePanel, appdata, setStatus, pkg } from '../utils.js'
 
@@ -33,11 +33,11 @@ class Home {
                     <div class="news-header">
                         <img class="server-status-icon" src="assets/images/icon.png">
                         <div class="header-text">
-                            <div class="title">Actualmente no hay noticias disponibles.</div>
+                            <div class="title">Aucun news n'ai actuellement disponible.</div>
                         </div>
                         <div class="date">
                             <div class="day">1</div>
-                            <div class="month">Abril</div>
+                            <div class="month">Janvier</div>
                         </div>
                     </div>
                     <div class="news-content">
@@ -65,7 +65,7 @@ class Home {
                         <div class="news-content">
                             <div class="bbWrapper">
                                 <p>${News.content.replace(/\n/g, '</br>')}</p>
-                                <p class="news-author">Auteur - <span>${News.author}</span></p>
+                                <p class="news-author">Autor - <span>${News.author}</span></p>
                             </div>
                         </div>`
                     newsElement.appendChild(blockNews);

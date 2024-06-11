@@ -1,6 +1,6 @@
 /**
- * @autor Azukiss
- * @licencia CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
+ * @author Luuxis
+ * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
  */
 
 import { changePanel, accountSelect, database, Slider, config, setStatus, popup, appdata, setBackground } from '../utils.js'
@@ -53,8 +53,8 @@ class Settings {
                 let id = e.target.id
                 if (e.target.classList.contains('account')) {
                     popupAccount.openPopup({
-                        title: 'Conexión',
-                        content: 'Espere por favor',
+                        title: 'Connexion',
+                        content: 'Veuillez patienter...',
                         color: 'var(--color)'
                     })
 
@@ -72,8 +72,8 @@ class Settings {
 
                 if (e.target.classList.contains("delete-profile")) {
                     popupAccount.openPopup({
-                        title: 'Conexión',
-                        content: 'Espere por favor...',
+                        title: 'Connexion',
+                        content: 'Veuillez patienter...',
                         color: 'var(--color)'
                     })
                     await this.db.deleteData('accounts', id);
@@ -166,7 +166,7 @@ class Settings {
         javaPathText.textContent = `${await appdata()}/${process.platform == 'darwin' ? this.config.dataDirectory : `.${this.config.dataDirectory}`}/runtime`;
 
         let configClient = await this.db.readData('configClient')
-        let javaPath = configClient?.java_config?.java_path || 'Usar la versión de Java proporcionada con el launcher';
+        let javaPath = configClient?.java_config?.java_path || 'Utiliser la version de java livre avec le launcher';
         let javaPathInputTxt = document.querySelector(".java-path-input-text");
         let javaPathInputFile = document.querySelector(".java-path-input-file");
         javaPathInputTxt.value = javaPath;
@@ -187,12 +187,12 @@ class Settings {
                 javaPathInputTxt.value = file;
                 configClient.java_config.java_path = file
                 await this.db.updateData('configClient', configClient);
-            } else alert("El nombre del archivo debe ser java o javaw");
+            } else alert("Le nom du fichier doit être java ou javaw");
         });
 
         document.querySelector(".java-path-reset").addEventListener("click", async () => {
             let configClient = await this.db.readData('configClient')
-            javaPathInputTxt.value = 'Usar la versión de Java proporcionada con el launcher';
+            javaPathInputTxt.value = 'Utiliser la version de java livre avec le launcher';
             configClient.java_config.java_path = null
             await this.db.updateData('configClient', configClient);
         });
