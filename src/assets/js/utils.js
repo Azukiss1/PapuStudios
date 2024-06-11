@@ -68,13 +68,8 @@ async function appdata() {
 }
 
 async function addAccount(data) {
-<<<<<<< HEAD
     let skin = false;
     if (data.meta.type == 'Xbox') skin = await new skin2D().creatHeadTexture(data.profile.skins[0].base64);
-=======
-    let skin = false
-    if (data?.profile?.skins[0]?.base64) skin = await new skin2D().creatHeadTexture(data.profile.skins[0].base64);
->>>>>>> ef83cc64a8f7be4b779a145c87e61548db85f3fc
     let div = document.createElement("div");
     div.classList.add("account");
     div.id = data.ID;
