@@ -1,24 +1,14 @@
 {
-<<<<<<< HEAD
     "name": "ConterSafio",
     "preductname": "ConterSafio",
-    "version": "1.0.0",
+    "version": "2.9.0",
     "description": "Launcher para ConterSafio",
-=======
-    "name": "Selvania-Launcher",
-    "preductname": "Selvania Launcher",
-    "version": "2.0.7",
-    "description": "Launcher Mincraft pour le serveur Selvania",
->>>>>>> ef83cc64a8f7be4b779a145c87e61548db85f3fc
+
     "main": "src/app.js",
     "author": {
         "url": "https://github.com/luuxis"
     },
-<<<<<<< HEAD
     "url": "https://papustudios.000webhostapp.com/main/",
-=======
-    "url": "http://launcher.luuxis.fr",
->>>>>>> ef83cc64a8f7be4b779a145c87e61548db85f3fc
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
@@ -31,10 +21,7 @@
         "ignore": "**/test"
     },
     "dependencies": {
-<<<<<<< HEAD
         "discord-rpc": "^4.0.1",
-=======
->>>>>>> ef83cc64a8f7be4b779a145c87e61548db85f3fc
         "electron-updater": "^6.1.8",
         "minecraft-java-core": "^3.10.4",
         "node-bdd": "^2.0.4",
