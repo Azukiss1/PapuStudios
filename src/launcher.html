@@ -1,18 +1,12 @@
-<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
     <link rel="stylesheet" href="assets/css/launcher.css">
-    <title>Launcher</title>
 </head>
-<body>
-    <!-- Video de fondo -->
-    <button id="muteButton">Mute</button>
-    <video autoplay loop id="background-video">
-        <source src="../src/assets/images/background/333.mp4" type="video/mp4">
-    </video>
 
+<body class="dfvf">
     <div class="dragbar"></div>
     <div class="frame">
         <div id="minimize" class="button-frame icon-minimize"></div>
@@ -25,74 +19,12 @@
             <div class="popup-title"></div>
             <div class="popup-content"></div>
             <div class="popup-options">
-                <button class="popup-button">OK</button>
+                <button class="popup-button">Aceptar</button>
             </div>
         </div>
     </div>
-
     <div class="panels"></div>
     <script src="assets/js/launcher.js" type="module"></script>
-    <script>
-        const video = document.getElementById("background-video");
-        const muteButton = document.getElementById("muteButton");
-
-        const isMuted = localStorage.getItem('isMuted') === 'true';
-
-        // Función para alternar el mute
-        function toggleMute() {
-            if (video.muted) {
-                video.muted = false;
-                muteButton.innerText = "Mute";
-                localStorage.setItem('isMuted', 'false');
-            } else {
-                video.muted = true;
-                muteButton.innerText = "Unmute";
-                localStorage.setItem('isMuted', 'true');
-            }
-        }
-
-        // Configuración inicial del muteButton
-        if (isMuted) {
-            video.muted = true;
-            muteButton.innerText = "Unmute";
-        } else {
-            video.muted = false;
-            muteButton.innerText = "Mute";
-        }
-
-        // Añadir el evento de clic al botón de mute
-        muteButton.addEventListener("click", toggleMute);
-    </script>
-
-    <style>
-        #background-video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
-        }
-
-        #muteButton {
-            position: absolute;
-            background: #23157680;
-            top: 660px; /* Subir para que suba */
-            right: 100px;
-            text-align: center;
-            height: 50px;
-            border: none;
-            border-radius: 15px;
-            transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
-            z-index: 2;
-        }
-
-        #muteButton:hover {
-            border-radius: 5px;
-            transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
-            background-color: #160d4980;
-            box-shadow: 0 0 5px #160d4980;
-        }
-    </style>
 </body>
+
 </html>
