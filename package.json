@@ -1,13 +1,14 @@
 {
-    "name": "ConterSafio",
-    "preductname": "ConterSafio",
-    "version": "4.9.0",
-    "description": "Launcher para ConterSafio",
+    "name": "Eclipse-Launcher",
+    "preductname": "Eclipse-Launcher",
+    "version": "1.0.0",
+    "description": "Launcher para los eventos de Eclipse Studios",
     "main": "src/app.js",
     "author": {
+        "name": "Azukiss",
         "url": "https://github.com/luuxis"
     },
-    "url": "https://papustudios.000webhostapp.com/main/",
+    "url": "https://eclipsestudiosofficial.000webhostapp.com/main/",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
@@ -20,9 +21,8 @@
         "ignore": "**/test"
     },
     "dependencies": {
-        "axios": "^1.7.2",
         "discord-rpc": "^4.0.1",
-        "electron-updater": "^6.2.1",
+        "electron-updater": "^6.1.8",
         "minecraft-java-core": "^3.10.4",
         "node-bdd": "^2.0.4",
         "node-fetch": "^2.7.0",
@@ -31,7 +31,7 @@
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
-        "electron": "^30.1.0",
+        "electron": "^30.0.9",
         "electron-builder": "^24.13.3",
         "javascript-obfuscator": "^4.1.0",
         "jimp": "^0.22.12",
@@ -40,6 +40,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Azukiss1/Ant-Launcher"
+        "url": "git+https://github.com/luuxis/Selvania-Launcher.git"
     }
 }
