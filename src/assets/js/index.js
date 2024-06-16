@@ -1,5 +1,5 @@
 /**
- * @author Luuxis
+ * @author Azukiss
  * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
  */
 
@@ -8,6 +8,7 @@ const pkg = require('../package.json');
 const os = require('os');
 import { config, database } from './utils.js';
 const nodeFetch = require("node-fetch");
+
 
 class Splash {
     constructor() {
@@ -50,10 +51,10 @@ class Splash {
     }
 
     async checkUpdate() {
-        this.setStatus(`Buscando actualizaciones...`);
+        this.setStatus(`Buscando una actualización...`);
 
         ipcRenderer.invoke('update-app').then().catch(err => {
-            return this.shutdown(`Error al buscar actualizaciones:<br>${err.message}`);
+            return this.shutdown(`error al buscar actualización :<br>${err.message}`);
         });
 
         ipcRenderer.on('updateAvailable', () => {
@@ -61,22 +62,23 @@ class Splash {
             if (os.platform() == 'win32') {
                 this.toggleProgress();
                 ipcRenderer.send('start-update');
-            } else return this.dowloadUpdate();
-        });
+            }
+            else return this.dowloadUpdate();
+        })
 
         ipcRenderer.on('error', (event, err) => {
             if (err) return this.shutdown(`${err.message}`);
-        });
+        })
 
         ipcRenderer.on('download-progress', (event, progress) => {
-            ipcRenderer.send('update-window-progress', { progress: progress.transferred, size: progress.total });
+            ipcRenderer.send('update-window-progress', { progress: progress.transferred, size: progress.total })
             this.setProgress(progress.transferred, progress.total);
-        });
+        })
 
         ipcRenderer.on('update-not-available', () => {
             console.error("Actualización no disponible");
             this.maintenanceCheck();
-        });
+        })
     }
 
     getLatestReleaseForOS(os, preferredFormat, asset) {
@@ -102,12 +104,14 @@ class Splash {
         if (os.platform() == 'darwin') latest = this.getLatestReleaseForOS('mac', '.dmg', latestRelease);
         else if (os == 'linux') latest = this.getLatestReleaseForOS('linux', '.appimage', latestRelease);
 
-        this.setStatus(`¡Actualización disponible!<br><div class="download-update">Descargar</div>`);
+
+        this.setStatus(`Mise à jour disponible !<br><div class="download-update">Télécharger</div>`);
         document.querySelector(".download-update").addEventListener("click", () => {
             shell.openExternal(latest.browser_download_url);
-            return this.shutdown("Descarga en curso...");
+            return this.shutdown("Descargando...");
         });
     }
+
 
     async maintenanceCheck() {
         config.GetConfig().then(res => {
@@ -115,21 +119,21 @@ class Splash {
             this.startLauncher();
         }).catch(e => {
             console.error(e);
-            return this.shutdown("No se detectó conexión a internet,<br>por favor intente nuevamente más tarde.");
-        });
+            return this.shutdown("No se detectó ninguna conexión a Internet.<br>Vuelve a intentarlo más tarde.");
+        })
     }
 
     startLauncher() {
-        this.setStatus(`Iniciando el launcher`);
+        this.setStatus(`Iniciando el lanzador`);
         ipcRenderer.send('main-window-open');
         ipcRenderer.send('update-window-close');
     }
 
     shutdown(text) {
-        this.setStatus(`${text}<br>Cerrando en 5s`);
+        this.setStatus(`${text}<br>Arrêt dans 5s`);
         let i = 4;
         setInterval(() => {
-            this.setStatus(`${text}<br>Cerrando en ${i--}s`);
+            this.setStatus(`${text}<br>Arrêt dans ${i--}s`);
             if (i < 0) ipcRenderer.send('update-window-close');
         }, 1000);
     }
@@ -156,5 +160,5 @@ document.addEventListener("keydown", (e) => {
     if (e.ctrlKey && e.shiftKey && e.keyCode == 73 || e.keyCode == 123) {
         ipcRenderer.send("update-window-dev-tools");
     }
-});
+})
 new Splash();

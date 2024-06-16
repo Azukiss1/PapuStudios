@@ -1,18 +1,19 @@
 {
     "name": "ConterSafio",
     "preductname": "ConterSafio",
-    "version": "4.9.0",
+    "version": "5.1.0",
     "description": "Launcher para ConterSafio",
     "main": "src/app.js",
     "author": {
         "url": "https://github.com/luuxis"
     },
     "url": "https://papustudios.000webhostapp.com/main/",
+
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
         "build": "node build.js --obf=true --build=platform",
-        "icon": "node build.js --icon=https://raw.githubusercontent.com/luuxis/Selvania-Launcher/master/src/assets/images/icon.png"
+        "icon": "node build.js --icon=https://cdn.discordapp.com/attachments/1230173408248070234/1230914561847197787/foto.png?ex=66350d84&is=66229884&hm=2314a57debe3e659f2b8b275d921f2c668b748729eacefeb8f70240bde7f056a&"
     },
     "license": "CCANC",
     "nodemonConfig": {
@@ -20,22 +21,20 @@
         "ignore": "**/test"
     },
     "dependencies": {
-        "axios": "^1.7.2",
         "discord-rpc": "^4.0.1",
-        "electron-updater": "^6.2.1",
-        "minecraft-java-core": "^3.10.4",
-        "node-bdd": "^2.0.4",
+        "electron-updater": "^6.1.4",
+        "minecraft-java-core": "^3.9.1",
+        "node-bdd": "^2.0.3",
         "node-fetch": "^2.7.0",
-        "rpc": "^3.3.3",
         "xml-js": "^1.6.11"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
-        "electron": "^30.1.0",
-        "electron-builder": "^24.13.3",
+        "electron": "^29.1.6",
+        "electron-builder": "^24.6.4",
         "javascript-obfuscator": "^4.1.0",
-        "jimp": "^0.22.12",
-        "nodemon": "^3.1.2",
+        "jimp": "^0.22.10",
+        "nodemon": "^3.0.1",
         "png2icons": "^2.0.1"
     },
     "repository": {

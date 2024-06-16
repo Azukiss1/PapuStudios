@@ -1,5 +1,5 @@
 /**
- * @author Luuxis
+ * @author ruinita
  * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
  */
 
@@ -17,17 +17,22 @@ import slider from './utils/slider.js';
 
 async function setBackground(theme) {
     if (typeof theme == 'undefined') {
-        theme = 'dark global'
+        let databaseLauncher = new database();
+        let configClient = await databaseLauncher.readData('configClient');
+        theme = configClient?.launcher_config?.theme || "auto"
+        theme = await ipcRenderer.invoke('is-dark-theme', theme).then(res => res)
     }
     let background
     let body = document.body;
     body.className = theme ? 'dark global' : 'light global';
-    if (fs.existsSync(`${__dirname}/assets/images/background/1.png`)) {
-        background = `url(./assets/images/background/1.png)`;
-    } else if (fs.existsSync(`${__dirname}/assets/images/background`)) {
-        background = `linear-gradient(#00000080, #00000080), url(./assets/images/background/1,png)`;
-    } else if (theme = 'SupervivenciaEnJaén') {
-        background = url('./assets/images/background/1.png')
+    if (fs.existsSync(`${__dirname}/assets/images/background/easterEgg`) && Math.random() < 0.005) {
+        let backgrounds = fs.readdirSync(`${__dirname}/assets/images/background/easterEgg`);
+        let Background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        background = `url(./assets/images/background/easterEgg/${Background})`;
+    } else if (fs.existsSync(`${__dirname}/assets/images/background/${theme ? 'dark' : 'light'}`)) {
+        let backgrounds = fs.readdirSync(`${__dirname}/assets/images/background/${theme ? 'dark' : 'light'}`);
+        let Background = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        background = `linear-gradient(#00000080, #00000080), url(./assets/images/background/${theme ? 'dark' : 'light'}/${Background})`;
     }
     body.style.backgroundImage = background ? background : theme ? '#000' : '#fff';
     body.style.backgroundSize = 'cover';
@@ -69,6 +74,12 @@ async function accountSelect(data) {
 
     if (activeAccount) activeAccount.classList.toggle('account-select');
     account.classList.add('account-select');
+    if (data.meta.type == 'Xbox') headplayer(data.profile.skins[0].base64);
+}
+
+async function headplayer(skinBase64) {
+    let skin = await new skin2D().creatHeadTexture(skinBase64);
+    document.querySelector(".player-head").style.backgroundImage = `url(${skin})`;
 }
 
 async function setStatus(opt) {
@@ -78,7 +89,7 @@ async function setStatus(opt) {
 
     if (!opt) {
         statusServerElement.classList.add('red')
-        statusServerElement.innerHTML = `Offline - 0 ms`
+        statusServerElement.innerHTML = `Ferme - 0 ms`
         document.querySelector('.status-player-count').classList.add('red')
         playersOnline.innerHTML = '0'
         return
@@ -92,11 +103,11 @@ async function setStatus(opt) {
     if (!statusServer.error) {
         statusServerElement.classList.remove('red')
         document.querySelector('.status-player-count').classList.remove('red')
-        statusServerElement.innerHTML = `En línea - ${statusServer.ms} ms`
+        statusServerElement.innerHTML = `En ligne - ${statusServer.ms} ms`
         playersOnline.innerHTML = statusServer.playersConnect
     } else {
         statusServerElement.classList.add('red')
-        statusServerElement.innerHTML = `Offline - 0 ms`
+        statusServerElement.innerHTML = `Ferme - 0 ms`
         document.querySelector('.status-player-count').classList.add('red')
         playersOnline.innerHTML = '0'
     }
