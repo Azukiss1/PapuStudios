@@ -1,7 +1,7 @@
 {
     "name": "ConterSafio",
     "preductname": "ConterSafio",
-    "version": "5.2.0",
+    "version": "5.2.5",
     "description": "Launcher para ConterSafio",
     "main": "src/app.js",
     "author": {
@@ -39,6 +39,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Azukiss1/Ant-Launcher"
+        "url": "git+https://github.com/Azukiss1/PapuStudios/actions/runs/9532413854/job/26274502643"
     }
 }
