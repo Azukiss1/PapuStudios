@@ -1,7 +1,7 @@
 {
     "name": "ConterSafio",
     "preductname": "ConterSafio",
-    "version": "5.2.5",
+    "version": "5.2.9",
     "description": "Launcher para ConterSafio",
     "main": "src/app.js",
     "author": {
@@ -13,7 +13,7 @@
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
         "build": "node build.js --obf=true --build=platform",
-        "icon": "node build.js --icon=https://cdn.discordapp.com/attachments/1230173408248070234/1230914561847197787/foto.png?ex=66350d84&is=66229884&hm=2314a57debe3e659f2b8b275d921f2c668b748729eacefeb8f70240bde7f056a&"
+        "icon": "node build.js --icon=https://raw.githubusercontent.com/luuxis/Selvania-Launcher/master/src/assets/images/icon.png"
     },
     "license": "CCANC",
     "nodemonConfig": {
