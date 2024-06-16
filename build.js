@@ -65,7 +65,7 @@ class Index {
                 generateUpdatesFilesForAllChannels: false,
                 appId: preductname,
                 productName: preductname,
-                copyright: 'Copyright © 2020-2023 Luuxis',
+                copyright: 'Copyright © 2020-2024 Luuxis',
                 artifactName: "${productName}-${os}-${arch}.${ext}",
                 extraMetadata: { main: 'app/app.js' },
                 files: ["app/**/*", "package.json", "LICENSE.md"],
@@ -111,9 +111,9 @@ class Index {
                 }
             }
         }).then(() => {
-            console.log('la construcción está terminada')
+            console.log('le build est terminé')
         }).catch(err => {
-            console.error('¡Error durante la compilación!', err)
+            console.error('Error during build!', err)
         })
     }
 

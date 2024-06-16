@@ -1,5 +1,5 @@
 /**
- * @author Azukiss
+ * @author ruinita
  */
 import { config, database, logger, changePanel, appdata, setStatus, pkg } from '../utils.js'
 

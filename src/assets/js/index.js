@@ -1,5 +1,5 @@
 /**
- * @author Azukiss
+ * @author ruinita
  * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
  */
 
@@ -30,9 +30,9 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "Bienvenido/a", "author": "Azukiss" },
-            { "message": "Bienvenido/a", "author": "Azukiss" },
-            { "message": "Bienvenido/a", "author": "Azukiss" }
+            { "message": "Bienvenido/a", "author": "ruinita" },
+            { "message": "Bienvenido/a", "author": "ruinita" },
+            { "message": "Bienvenido/a", "author": "ruinita" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
