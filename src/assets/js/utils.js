@@ -25,9 +25,9 @@ async function setBackground(theme) {
     if (fs.existsSync(`${__dirname}/assets/images/background/1.png`)) {
         background = `url(./assets/images/background/1.png)`;
     } else if (fs.existsSync(`${__dirname}/assets/images/background`)) {
-        background = `linear-gradient(#00000080, #00000080), url(./assets/images/background/1,png)`;
+        background = `linear-gradient(#00000080, #00000080), url(./assets/images/background/1.png)`;
     } else if (theme = 'SupervivenciaEnJaén') {
-        background = url('./assets/images/background/1.png')
+        background = url('./assets/images/background/supervivenciaEnJaen.jpg')
     }
     body.style.backgroundImage = background ? background : theme ? '#000' : '#fff';
     body.style.backgroundSize = 'cover';

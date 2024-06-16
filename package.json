@@ -1,7 +1,7 @@
 {
     "name": "ConterSafio",
     "preductname": "ConterSafio",
-    "version": "2.5.2",
+    "version": "2.5.4",
     "description": "Launcher para ConterSafio",
     "main": "src/app.js",
     "author": {
