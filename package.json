@@ -1,13 +1,13 @@
 {
-    "name": "ConterSafio",
-    "preductname": "ConterSafio",
-    "version": "2.5.4",
+    "name": "ConterSafio-Launcher",
+    "preductname": "ConterSafio-Launcher",
+    "version": "2.5.5",
     "description": "Launcher para ConterSafio",
     "main": "src/app.js",
     "author": {
         "url": "https://github.com/luuxis"
     },
-    "url": "https://papustudios.000webhostapp.com/main/",
+    "url": "https://antlauncher.000webhostapp.com/main/",
 
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
